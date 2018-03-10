@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
@@ -13,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import {ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { EmployeeSearchComponent } from './employees/employee-search/employee-search.component';
 
 
 @NgModule({
@@ -21,11 +20,13 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     EmployeesComponent,
     EmployeeComponent,
     EmployeeListComponent,
+    EmployeeSearchComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    BrowserAnimationsModule,
     FormsModule,
     ToastrModule.forRoot()
   ],
