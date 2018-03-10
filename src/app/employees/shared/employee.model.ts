@@ -4,4 +4,5 @@ export class Employee {
   position: string;
   office: string;
   salary: number;
+  age: number;
 }

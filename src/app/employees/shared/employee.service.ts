@@ -8,7 +8,7 @@ export class EmployeeService {
   employeeList: AngularFireList<any>;
   selectedEmployee: Employee = new Employee();
 
-  constructor(private firebase: AngularFireDatabase) {
+  constructor(public firebase: AngularFireDatabase) {
   }
 
   getData() {
@@ -21,6 +21,7 @@ export class EmployeeService {
       name: employee.name,
       position: employee.position,
       office: employee.office,
+      age: employee.age,
       salary: employee.salary
     });
   }
@@ -31,6 +32,7 @@ export class EmployeeService {
         name: employee.name,
         position: employee.position,
         office: employee.office,
+        age: employee.age,
         salary: employee.salary
       });
   }
