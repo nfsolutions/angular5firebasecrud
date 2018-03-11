@@ -1,0 +1,20 @@
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm.value)" novalidate>
+  <p>Is "searchForm" valid? {{searchForm.valid}}</p>
+  <div class="form-group">
+    <label>Search</label>
+    <input class="form-control" name="query" [(ngModel)]="criteria.query"
+           placeholder="Search criteria" required>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-default" type="submit" [disabled]="!searchForm.valid">
+      Submit
+    </button>
+    <button class="btn btn-default" type="button" (click)="resetForm(searchForm)">
+      Reset
+    </button>
+  </div>
+  <div class="form-group">
+    <p class="results">Number of results: {{searchResultEmployeeList.length}}</p>
+  </div>
+</form>
